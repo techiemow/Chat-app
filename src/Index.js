@@ -3,11 +3,12 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const Router = require("./Router/Routes");
-const connectdb  = require("../DB/Db");
+const connectdb = require("./Utils/Db");
+
 require("dotenv").config();
 
 const app = express();
-const port = process.env.PORT 
+const port = process.env.PORT || 5000
 
 
 app.use(cors());
